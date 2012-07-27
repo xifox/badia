@@ -62,17 +62,156 @@ footer, header, hgroup, menu, nav, section {
 ---------------------------------------------------------------------- */
 div#header{
 	width:100%;
-	height: 330px;
+	height:50%;
+	background: red;
+	background: url(../design/header-img1024.png) no-repeat;
+	background-position-y: 0px;
+	background-size: 100% 100%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 50%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	box-sizing: border-box;
 }		
 #header ul{
 	width: 100%;
 	height: 30px;
 	background: black;
+	padding-left:0%;
 }
 
 #header ul li{
 	color:white;
 	display: inline;
-	margin: 0 20px;
+	margin: 0 1%;
 	line-height:30px;
 }
+
+ /* content
+	------------------------------------------------------------------------*/
+#primary {
+	width:52%;
+	height: 39%;
+	margin: 0;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	position: relative;
+}
+#content {
+	width:100%;
+	height: 100%;
+	margin-left: 50px;
+	float: left;
+	background: rgba(0, 49, 71, 0.61);
+	padding: 30px 20px;
+	box-sizing: border-box;
+}
+ /* sidebar
+	------------------------------------------------------------------------*/
+#sidebar {
+	width: 300px;
+	height: 100%;
+	position:absolute;
+	right: 0px;
+	top: 0px;
+	margin-right: 50px;
+	background: rgba(0, 111, 162, 0.61);
+}
+#sidebar .logo {
+	background: url(../design/logo1.png) no-repeat;
+	width: 90px;
+	height: 90px;
+	position: relative;
+	top: 50px;
+	left: 20px;
+}
+#sidebar p {
+	position: relative;
+	top: 35px;
+	left: 105px;
+}
+#sidebar .mapa {
+	background: url(../design/mapa.png) no-repeat;
+	width:130px;
+	height: 273px;
+	position: relative;
+	bottom:-42%;
+	left: 95px;
+}
+
+/* footer
+	-------------------------------------------------------------------------*/
+#footer {
+	width: 100%;
+	height:5%;
+	border-top: 1px solid blue;
+}	
+
+/* =antiscroll
+-------------------------------------------------------*/
+.antiscroll-wrap {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.antiscroll-scrollbar {
+  background: gray;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 1px #fff;
+  -moz-box-shadow: 0 0 1px #fff;
+  box-shadow: 0 0 1px #fff;
+  position: absolute;
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -webkit-transition: linear 300ms opacity;
+  -moz-transition: linear 300ms opacity;
+  -o-transition: linear 300ms opacity;
+}
+
+.antiscroll-scrollbar-shown {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+.antiscroll-scrollbar-horizontal {
+  height: 7px;
+  margin-left: 2px;
+  bottom: 2px;
+  left: 0;
+}
+
+.antiscroll-scrollbar-vertical {
+  height: 100%;
+  width: 7px;
+  margin-top: 2px;
+  right: 2px;
+  top: 0;
+}
+
+.antiscroll-inner {
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+}
+
+.antiscroll-inner::-webkit-scrollbar, .antiscroll-inner::scrollbar {
+  width: 0;
+  height: 0;
+}
+
+div.box {
+	height: 100%;
+	width: 100%;
+	}
+
+div.box-inner {
+	height: 100%;
+	width: 100%;
+	}

@@ -14,7 +14,8 @@ height: 100%;
 }
 #page {
 height: 100%;
-margin: 0;
+margin: auto;
+padding: none;
 max-width: 1000px;
 }
 #branding {
@@ -22,14 +23,39 @@ border-top: none;
 height: 50%;
 padding-bottom: 10px;
 position: relative;
-z-index: 9999;
+z-index:0;
 }
 #branding hgroup {
 height: 50px;
 margin: 0 7.6%;
 }
+#branding img {
+margin-bottom: 0px;
+margin-top: -7px;
+}
+#access {
+position:absolute;
+top:0px;
+width: 140%;
+margin-left: -18%;
+}
+#access ul {
+margin: 0 0 0 80px;
+}
+#secondary {
+background: rgba(0, 111, 162, 0.61);
+width: 25%;
+height: 100%;
+position:absolute;
+right: 2px;
+top:28px;
 
-
+z-index: 9999;
+margin-top: 0px;
+}
+.widget-title , .widget ul li{
+color: black;
+}
 
 
 

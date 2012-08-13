@@ -11,12 +11,23 @@ Version:        0.1.0
 
 html, body {
 height: 100%;
+overflow: hidden;
 }
 #page {
 height: 100%;
 margin: auto;
 padding: none;
-max-width: 1000px;
+max-width: 1280px;
+}
+#main {
+width: 72%;
+height: 45%;
+padding: 0px;
+}
+#content {
+margin: 0 0% 0 5%;
+width: 90%;
+height: 100%;
 }
 #branding {
 border-top: none;
@@ -24,6 +35,7 @@ height: 50%;
 padding-bottom: 10px;
 position: relative;
 z-index:0;
+margin-bottom: 1.5%;
 }
 #branding hgroup {
 height: 50px;
@@ -36,27 +48,105 @@ margin-top: -7px;
 #access {
 position:absolute;
 top:0px;
-width: 140%;
-margin-left: -18%;
+width: 122%;
+margin-left: -16%;
 }
 #access ul {
 margin: 0 0 0 80px;
 }
+#primary {
+float: left;
+margin: 0 -26.4% 0 0;
+width: 100%;
+height: 100%;
+}
 #secondary {
 background: rgba(0, 111, 162, 0.61);
-width: 25%;
+width: 170px;
 height: 100%;
 position:absolute;
 right: 2px;
-top:28px;
-
+top:0px;
+padding-top:;
+padding-left: 20px;
+padding-right: 20px;
 z-index: 9999;
 margin-top: 0px;
+margin-right: 5%;
 }
 .widget-title , .widget ul li{
 color: black;
 }
+input#s {
+margin-top: 10px;
+}
+/* =antiscroll
+-------------------------------------------------------*/
+.antiscroll-wrap {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
 
+.antiscroll-scrollbar {
+  background: gray;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 1px #fff;
+  -moz-box-shadow: 0 0 1px #fff;
+  box-shadow: 0 0 1px #fff;
+  position: absolute;
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -webkit-transition: linear 300ms opacity;
+  -moz-transition: linear 300ms opacity;
+  -o-transition: linear 300ms opacity;
+}
+
+.antiscroll-scrollbar-shown {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+.antiscroll-scrollbar-horizontal {
+  height: 7px;
+  margin-left: 2px;
+  bottom: 2px;
+  left: 0;
+}
+
+.antiscroll-scrollbar-vertical {
+  height: 100%;
+  width: 7px;
+  margin-top: 2px;
+  right: 2px;
+  top: 0;
+}
+
+.antiscroll-inner {
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+}
+
+.antiscroll-inner::-webkit-scrollbar, .antiscroll-inner::scrollbar {
+  width: 0;
+  height: 0;
+}
+
+div.box {
+	height: 100%;
+	width: 100%;
+	}
+
+div.box-inner {
+	height: 100%;
+	width: 100%;
+	}
 
 
 

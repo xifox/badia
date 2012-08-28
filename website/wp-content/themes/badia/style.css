@@ -12,17 +12,23 @@ Version:        0.1.0
 html, body {
 height: 100%;
 overflow: hidden;
+padding: 0;
+margin: 0;
 }
 #page {
 height: 100%;
 margin: auto;
-padding: none;
-max-width: 1280px;
+padding: 0;
+max-width: 1366px;
+width: 100%;
 }
 #main {
-width: 72%;
-height: 45%;
-padding: 0px;
+width: 60%;
+height:100%;
+box-sizing:border-box;
+padding:415px 0 0 0px;
+margin: -415px 0 0 0;
+
 }
 #content {
 margin: 0 0% 0 5%;
@@ -31,28 +37,38 @@ height: 100%;
 }
 #branding {
 border-top: none;
-height: 50%;
-padding-bottom: 10px;
+height: 400px;
+padding: 0px;
 position: relative;
 z-index:0;
-margin-bottom: 1.5%;
+margin-bottom: 15px;
 }
 #branding hgroup {
 height: 50px;
 margin: 0 7.6%;
 }
 #branding img {
-margin-bottom: 0px;
-margin-top: -7px;
+margin: 0;
+height:350px;
+width: auto;
 }
 #access {
 position:absolute;
 top:0px;
-width: 122%;
-margin-left: -16%;
+width: 100%;
+height: 50px;
+margin: 0;
+}
+#access div{
+margin: 0;
 }
 #access ul {
-margin: 0 0 0 80px;
+margin: 0 0 0 20px;
+}
+#access ul li a{
+text-transform: uppercase;
+font-weight: bold;
+line-height: 50px;
 }
 #primary {
 float: left;
@@ -61,8 +77,8 @@ width: 100%;
 height: 100%;
 }
 #secondary {
-background: rgba(0, 111, 162, 0.61);
-width: 230px;
+background: rgba(0, 111, 162, 0.61); 
+width: 30%;
 height: 100%;
 box-sizing:border-box;
 -moz-box-sizing:border-box; /* Firefox */
@@ -73,7 +89,7 @@ top:0px;
 padding:30px 20px 0px 20px;
 z-index: 9999;
 margin-top: 0px;
-margin-right: 5%;
+margin-right: 10%;
 }
 #secondary h1 {
 z-index:99999;

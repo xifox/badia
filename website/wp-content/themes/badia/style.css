@@ -19,17 +19,20 @@ margin: 0;
 height: 100%;
 margin: auto;
 padding: 0;
-max-width: 1366px;
+max-width: 100%;
 width: 100%;
 }
 #main {
-width: 60%;
+width: 100%;
+max-width: 1366px;
 height:100%;
 box-sizing:border-box;
-padding:415px 0 0 0px;
-margin: -415px 0 0 0;
-
+padding: 415px 0 0 0px;
+margin: -415px auto 0;
+position:  relative;
+clear: none;
 }
+
 #content {
 margin: 0 0% 0 5%;
 width: 90%;
@@ -42,6 +45,7 @@ padding: 0px;
 position: relative;
 z-index:0;
 margin-bottom: 15px;
+z-index:10000
 }
 #branding hgroup {
 height: 50px;
@@ -49,9 +53,58 @@ margin: 0 7.6%;
 }
 #branding img {
 margin: 0;
-height:350px;
+height: auto;
 width: auto;
 }
+#slides{
+max-width:1200px;
+margin: 0 auto;
+height:350px;
+position: relative;
+}
+.slides_container{
+height:350px
+}
+#slides .next{
+position: absolute;
+right:-40px;
+top: 200px;
+}
+#slides .prev{
+position: absolute;
+left:-40px;
+top: 200px;
+}
+
+.pagination {
+    margin:6px 0 0;
+    float:left; 
+    list-style: none;
+}
+
+.pagination li {
+    float: left;
+    margin: 0 1px;
+}
+
+.pagination li a {
+    display: block;
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url(images/pagination.png);
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+}
+
+.pagination li.current a, .pagination li.current a:hover { background-position: 0 -13px }
+
+.pagination li a:hover { background-position: 0 -26px }
+
+#slides a:link, #slides a:visited { color: #333 }
+
+#slides a:hover, #slides a:active { color: #9e2020 }
 #access {
 position:absolute;
 top:0px;
@@ -70,10 +123,11 @@ text-transform: uppercase;
 font-weight: bold;
 line-height: 50px;
 }
+.singular #primary,
 #primary {
 float: left;
-margin: 0 -26.4% 0 0;
-width: 100%;
+margin: 0 40% 0 0;
+width: 60%;
 height: 100%;
 }
 #secondary {
@@ -87,7 +141,7 @@ position:absolute;
 right: 0px;
 top:0px;
 padding:30px 20px 0px 20px;
-z-index: 9999;
+z-index: 99969999;
 margin-top: 0px;
 margin-right: 10%;
 }

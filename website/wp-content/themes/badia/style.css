@@ -90,9 +90,7 @@ padding:30px 20px 0px 20px;
 z-index: 9999;
 margin-top: 0px;
 margin-right: 10%;
-}
-#secondary h1 {
-z-index:99999;
+text-align: center;
 }
 .widget-title , .widget ul li{
 color: black;

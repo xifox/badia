@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.3.2deb1ubuntu1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-08-2012 a las 17:04:55
--- Versión del servidor: 5.5.16
--- Versión de PHP: 5.3.8
+-- Tiempo de generación: 28-08-2012 a las 16:58:45
+-- Versión del servidor: 5.1.63
+-- Versión de PHP: 5.3.2-1ubuntu4.17
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -35,6 +34,11 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
   KEY `comment_id` (`comment_id`),
   KEY `meta_key` (`meta_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `wp_commentmeta`
+--
+
 
 -- --------------------------------------------------------
 
@@ -66,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Volcado de datos para la tabla `wp_comments`
+-- Volcar la base de datos para la tabla `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -97,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- Volcado de datos para la tabla `wp_links`
+-- Volcar la base de datos para la tabla `wp_links`
 --
 
 INSERT INTO `wp_links` (`link_id`, `link_url`, `link_name`, `link_image`, `link_target`, `link_description`, `link_visible`, `link_owner`, `link_rating`, `link_updated`, `link_rel`, `link_notes`, `link_rss`) VALUES
@@ -122,10 +126,10 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=338 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=350 ;
 
 --
--- Volcado de datos para la tabla `wp_options`
+-- Volcar la base de datos para la tabla `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -186,7 +190,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (55, 'upload_path', '', 'yes'),
 (56, 'blog_public', '1', 'yes'),
 (57, 'default_link_category', '2', 'yes'),
-(58, 'show_on_front', 'posts', 'yes'),
+(58, 'show_on_front', 'page', 'yes'),
 (59, 'tag_base', '', 'yes'),
 (60, 'show_avatars', '1', 'yes'),
 (61, 'avatar_rating', 'G', 'yes'),
@@ -222,7 +226,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (91, 'embed_size_w', '', 'yes'),
 (92, 'embed_size_h', '600', 'yes'),
 (93, 'page_for_posts', '0', 'yes'),
-(94, 'page_on_front', '0', 'yes'),
+(94, 'page_on_front', '33', 'yes'),
 (95, 'default_post_format', '0', 'yes'),
 (96, 'initial_db_version', '21115', 'yes'),
 (97, 'wp_user_roles', 'a:5:{s:13:"administrator";a:2:{s:4:"name";s:13:"Administrator";s:12:"capabilities";a:62:{s:13:"switch_themes";b:1;s:11:"edit_themes";b:1;s:16:"activate_plugins";b:1;s:12:"edit_plugins";b:1;s:10:"edit_users";b:1;s:10:"edit_files";b:1;s:14:"manage_options";b:1;s:17:"moderate_comments";b:1;s:17:"manage_categories";b:1;s:12:"manage_links";b:1;s:12:"upload_files";b:1;s:6:"import";b:1;s:15:"unfiltered_html";b:1;s:10:"edit_posts";b:1;s:17:"edit_others_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:10:"edit_pages";b:1;s:4:"read";b:1;s:8:"level_10";b:1;s:7:"level_9";b:1;s:7:"level_8";b:1;s:7:"level_7";b:1;s:7:"level_6";b:1;s:7:"level_5";b:1;s:7:"level_4";b:1;s:7:"level_3";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:17:"edit_others_pages";b:1;s:20:"edit_published_pages";b:1;s:13:"publish_pages";b:1;s:12:"delete_pages";b:1;s:19:"delete_others_pages";b:1;s:22:"delete_published_pages";b:1;s:12:"delete_posts";b:1;s:19:"delete_others_posts";b:1;s:22:"delete_published_posts";b:1;s:20:"delete_private_posts";b:1;s:18:"edit_private_posts";b:1;s:18:"read_private_posts";b:1;s:20:"delete_private_pages";b:1;s:18:"edit_private_pages";b:1;s:18:"read_private_pages";b:1;s:12:"delete_users";b:1;s:12:"create_users";b:1;s:17:"unfiltered_upload";b:1;s:14:"edit_dashboard";b:1;s:14:"update_plugins";b:1;s:14:"delete_plugins";b:1;s:15:"install_plugins";b:1;s:13:"update_themes";b:1;s:14:"install_themes";b:1;s:11:"update_core";b:1;s:10:"list_users";b:1;s:12:"remove_users";b:1;s:9:"add_users";b:1;s:13:"promote_users";b:1;s:18:"edit_theme_options";b:1;s:13:"delete_themes";b:1;s:6:"export";b:1;}}s:6:"editor";a:2:{s:4:"name";s:6:"Editor";s:12:"capabilities";a:34:{s:17:"moderate_comments";b:1;s:17:"manage_categories";b:1;s:12:"manage_links";b:1;s:12:"upload_files";b:1;s:15:"unfiltered_html";b:1;s:10:"edit_posts";b:1;s:17:"edit_others_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:10:"edit_pages";b:1;s:4:"read";b:1;s:7:"level_7";b:1;s:7:"level_6";b:1;s:7:"level_5";b:1;s:7:"level_4";b:1;s:7:"level_3";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:17:"edit_others_pages";b:1;s:20:"edit_published_pages";b:1;s:13:"publish_pages";b:1;s:12:"delete_pages";b:1;s:19:"delete_others_pages";b:1;s:22:"delete_published_pages";b:1;s:12:"delete_posts";b:1;s:19:"delete_others_posts";b:1;s:22:"delete_published_posts";b:1;s:20:"delete_private_posts";b:1;s:18:"edit_private_posts";b:1;s:18:"read_private_posts";b:1;s:20:"delete_private_pages";b:1;s:18:"edit_private_pages";b:1;s:18:"read_private_pages";b:1;}}s:6:"author";a:2:{s:4:"name";s:6:"Author";s:12:"capabilities";a:10:{s:12:"upload_files";b:1;s:10:"edit_posts";b:1;s:20:"edit_published_posts";b:1;s:13:"publish_posts";b:1;s:4:"read";b:1;s:7:"level_2";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:12:"delete_posts";b:1;s:22:"delete_published_posts";b:1;}}s:11:"contributor";a:2:{s:4:"name";s:11:"Contributor";s:12:"capabilities";a:5:{s:10:"edit_posts";b:1;s:4:"read";b:1;s:7:"level_1";b:1;s:7:"level_0";b:1;s:12:"delete_posts";b:1;}}s:10:"subscriber";a:2:{s:4:"name";s:10:"Subscriber";s:12:"capabilities";a:2:{s:4:"read";b:1;s:7:"level_0";b:1;}}}', 'yes'),
@@ -232,15 +236,15 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (101, 'widget_archives', 'a:2:{i:2;a:3:{s:5:"title";s:0:"";s:5:"count";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_meta', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'sidebars_widgets', 'a:7:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:4:{i:0;s:8:"search-2";i:1;s:17:"recent-comments-2";i:2;s:10:"archives-2";i:3;s:12:"categories-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}s:9:"sidebar-4";a:0:{}s:9:"sidebar-5";a:0:{}s:13:"array_version";i:3;}', 'yes'),
-(104, 'cron', 'a:4:{i:1346180596;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1346194617;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1346248660;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
-(106, '_transient_random_seed', '51c0930f146ad6104842624a562740f8', 'yes'),
+(104, 'cron', 'a:4:{i:1346194617;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1346223796;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1346248660;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(106, '_transient_random_seed', '97220c04bfddd03683544f6a23203450', 'yes'),
 (107, 'auth_key', 't]=~97=,(3mNHp02+C-&a9/:rW%Uux`.<CM#IK_8:8)+npovq|8nB/b SZ&o2q-+', 'yes'),
-(108, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:2:{i:0;O:8:"stdClass":9:{s:8:"response";s:6:"latest";s:8:"download";s:49:"http://es.wordpress.org/wordpress-3.4.1-es_ES.zip";s:6:"locale";s:5:"es_ES";s:8:"packages";O:8:"stdClass":4:{s:4:"full";s:49:"http://es.wordpress.org/wordpress-3.4.1-es_ES.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;}s:7:"current";s:5:"3.4.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.2";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":9:{s:8:"response";s:6:"latest";s:8:"download";s:40:"http://wordpress.org/wordpress-3.4.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":4:{s:4:"full";s:40:"http://wordpress.org/wordpress-3.4.1.zip";s:10:"no_content";s:51:"http://wordpress.org/wordpress-3.4.1-no-content.zip";s:11:"new_bundled";s:52:"http://wordpress.org/wordpress-3.4.1-new-bundled.zip";s:7:"partial";b:0;}s:7:"current";s:5:"3.4.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.2";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1346159558;s:15:"version_checked";s:5:"3.4.1";}', 'yes'),
+(108, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:2:{i:0;O:8:"stdClass":9:{s:8:"response";s:6:"latest";s:8:"download";s:49:"http://es.wordpress.org/wordpress-3.4.1-es_ES.zip";s:6:"locale";s:5:"es_ES";s:8:"packages";O:8:"stdClass":4:{s:4:"full";s:49:"http://es.wordpress.org/wordpress-3.4.1-es_ES.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;}s:7:"current";s:5:"3.4.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.2";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":9:{s:8:"response";s:6:"latest";s:8:"download";s:40:"http://wordpress.org/wordpress-3.4.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":4:{s:4:"full";s:40:"http://wordpress.org/wordpress-3.4.1.zip";s:10:"no_content";s:51:"http://wordpress.org/wordpress-3.4.1-no-content.zip";s:11:"new_bundled";s:52:"http://wordpress.org/wordpress-3.4.1-new-bundled.zip";s:7:"partial";b:0;}s:7:"current";s:5:"3.4.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.2";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1346180614;s:15:"version_checked";s:5:"3.4.1";}', 'yes'),
 (109, 'auth_salt', '/:5Cd)K;xLY8#T=uIkj+lM`5(#-fhnH+%/WtF0W!CalsA&voH@45*btNMd0`zD<`', 'yes'),
 (110, 'logged_in_key', '&:&d:pz8 jU-QfS4uuc~$M+^e{gcovw/!C]/FN|f7xm5+r-b}{xWO|Z_w[<5(yt+', 'yes'),
 (111, 'logged_in_salt', '}W}*X7gmj@n5,7Cn0RfD$8GlZo@XEPwHGxRci6MIaeTpA^oQZnC{ifmr<5bCM:37', 'yes'),
 (112, '_site_transient_update_plugins', 'O:8:"stdClass":3:{s:12:"last_checked";i:1346162366;s:7:"checked";a:2:{s:19:"akismet/akismet.php";s:5:"2.5.6";s:9:"hello.php";s:3:"1.6";}s:8:"response";a:0:{}}', 'yes'),
-(115, '_site_transient_update_themes', 'O:8:"stdClass":3:{s:12:"last_checked";i:1346169385;s:7:"checked";a:3:{s:5:"badia";s:5:"0.1.0";s:12:"twentyeleven";s:3:"1.4";s:9:"twentyten";s:3:"1.4";}s:8:"response";a:0:{}}', 'yes'),
+(115, '_site_transient_update_themes', 'O:8:"stdClass":3:{s:12:"last_checked";i:1346183085;s:7:"checked";a:3:{s:5:"badia";s:5:"0.1.0";s:12:"twentyeleven";s:3:"1.4";s:9:"twentyten";s:3:"1.4";}s:8:"response";a:0:{}}', 'yes'),
 (116, '_site_transient_timeout_browser_93ce43dc55bd29ecc99e83ca12b5d7f4', '1343156605', 'yes'),
 (117, '_site_transient_browser_93ce43dc55bd29ecc99e83ca12b5d7f4', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:12:"20.0.1132.57";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
 (118, 'dashboard_widget_options', 'a:4:{s:25:"dashboard_recent_comments";a:1:{s:5:"items";i:5;}s:24:"dashboard_incoming_links";a:5:{s:4:"home";s:30:"http://localhost/badia/website";s:4:"link";s:106:"http://blogsearch.google.com/blogsearch?scoring=d&partner=wordpress&q=link:http://localhost/badia/website/";s:3:"url";s:139:"http://blogsearch.google.com/blogsearch_feeds?scoring=d&ie=utf-8&num=10&output=rss&partner=wordpress&q=link:http://localhost/badia/website/";s:5:"items";i:10;s:9:"show_date";b:0;}s:17:"dashboard_primary";a:7:{s:4:"link";s:26:"http://wordpress.org/news/";s:3:"url";s:31:"http://wordpress.org/news/feed/";s:5:"title";s:22:"Blog oficial WordPress";s:5:"items";i:2;s:12:"show_summary";i:1;s:11:"show_author";i:0;s:9:"show_date";i:1;}s:19:"dashboard_secondary";a:7:{s:4:"link";s:28:"http://planet.wordpress.org/";s:3:"url";s:33:"http://planet.wordpress.org/feed/";s:5:"title";s:30:"Otras noticias sobre WordPress";s:5:"items";i:5;s:12:"show_summary";i:0;s:11:"show_author";i:0;s:9:"show_date";i:0;}}', 'yes'),
@@ -248,7 +252,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (120, 'nonce_salt', '-_;aA.T%V>Oyxug5:w[f)K>,~@g|ENO.-gy(c7ag@.0<jC,^V<PZrUTlk?O7iWW@', 'yes'),
 (121, 'can_compress_scripts', '1', 'yes'),
 (186, 'current_theme', 'Twenty Eleven Child', 'yes'),
-(187, 'theme_mods_badia', 'a:8:{i:0;b:0;s:16:"header_textcolor";s:5:"blank";s:16:"background_color";s:6:"f1f1f1";s:16:"background_image";s:0:"";s:17:"background_repeat";s:6:"repeat";s:21:"background_position_x";s:4:"left";s:21:"background_attachment";s:5:"fixed";s:12:"header_image";s:21:"random-uploaded-image";}', 'yes'),
+(187, 'theme_mods_badia', 'a:9:{i:0;b:0;s:16:"header_textcolor";s:5:"blank";s:16:"background_color";s:6:"f1f1f1";s:16:"background_image";s:0:"";s:17:"background_repeat";s:6:"repeat";s:21:"background_position_x";s:4:"left";s:21:"background_attachment";s:5:"fixed";s:12:"header_image";s:21:"random-uploaded-image";s:18:"nav_menu_locations";a:2:{s:9:"secondary";i:4;s:7:"primary";i:3;}}', 'yes'),
 (188, 'theme_switched', '', 'yes'),
 (189, 'twentyeleven_theme_options', 'a:3:{s:12:"color_scheme";s:5:"light";s:10:"link_color";s:7:"#000000";s:12:"theme_layout";s:15:"content-sidebar";}', 'yes'),
 (192, 'theme_mods_twentyeleven', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1343056537;s:4:"data";a:6:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}s:9:"sidebar-4";a:0:{}s:9:"sidebar-5";a:0:{}}}}', 'yes'),
@@ -294,10 +298,13 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (329, '_transient_timeout_dash_de3249c4736ad3bd2cd29147c4a0d43e', '1346205541', 'no'),
 (330, '_transient_dash_de3249c4736ad3bd2cd29147c4a0d43e', '<h4>Más populares</h4>\n<h5><a href=''http://wordpress.org/extend/plugins/jetpack/''>Jetpack by WordPress.com</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=jetpack&amp;_wpnonce=01e308dbf1&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''Jetpack by WordPress.com''>Instalar</a>)</span>\n<p>Supercharge your WordPress site with powerful features previously only available to WordPress.com users.</p>\n<h4>Plugins recientes</h4>\n<h5><a href=''http://wordpress.org/extend/plugins/pokemon-accented-e/''>Pokémon Accented E</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=pokemon-accented-e&amp;_wpnonce=d44c60f591&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''Pokémon Accented E''>Instalar</a>)</span>\n<p>Automatically corrects instances of the word Pokemon to Pokémon in your post content and titles.</p>\n', 'no'),
 (331, 'recently_activated', 'a:0:{}', 'yes'),
-(334, '_site_transient_timeout_wporg_theme_feature_list', '1346180185', 'yes'),
-(335, '_site_transient_wporg_theme_feature_list', 'a:5:{s:6:"Colors";a:15:{i:0;s:5:"black";i:1;s:4:"blue";i:2;s:5:"brown";i:3;s:4:"gray";i:4;s:5:"green";i:5;s:6:"orange";i:6;s:4:"pink";i:7;s:6:"purple";i:8;s:3:"red";i:9;s:6:"silver";i:10;s:3:"tan";i:11;s:5:"white";i:12;s:6:"yellow";i:13;s:4:"dark";i:14;s:5:"light";}s:7:"Columns";a:6:{i:0;s:10:"one-column";i:1;s:11:"two-columns";i:2;s:13:"three-columns";i:3;s:12:"four-columns";i:4;s:12:"left-sidebar";i:5;s:13:"right-sidebar";}s:5:"Width";a:2:{i:0;s:11:"fixed-width";i:1;s:14:"flexible-width";}s:8:"Features";a:18:{i:0;s:8:"blavatar";i:1;s:10:"buddypress";i:2;s:17:"custom-background";i:3;s:13:"custom-colors";i:4;s:13:"custom-header";i:5;s:11:"custom-menu";i:6;s:12:"editor-style";i:7;s:21:"featured-image-header";i:8;s:15:"featured-images";i:9;s:20:"front-page-post-form";i:10;s:19:"full-width-template";i:11;s:12:"microformats";i:12;s:12:"post-formats";i:13;s:20:"rtl-language-support";i:14;s:11:"sticky-post";i:15;s:13:"theme-options";i:16;s:17:"threaded-comments";i:17;s:17:"translation-ready";}s:7:"Subject";a:3:{i:0;s:7:"holiday";i:1;s:13:"photoblogging";i:2;s:8:"seasonal";}}', 'yes'),
-(336, '_site_transient_timeout_theme_roots', '1346171184', 'yes'),
-(337, '_site_transient_theme_roots', 'a:3:{s:5:"badia";s:7:"/themes";s:12:"twentyeleven";s:7:"/themes";s:9:"twentyten";s:7:"/themes";}', 'yes');
+(338, '_site_transient_timeout_browser_d6d9f08cde15427f8ae9285ed8c7ffa8', '1346781526', 'yes'),
+(339, '_site_transient_browser_d6d9f08cde15427f8ae9285ed8c7ffa8', 'a:9:{s:8:"platform";s:5:"Linux";s:4:"name";s:6:"Chrome";s:7:"version";s:13:"18.0.1025.151";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
+(345, '_site_transient_timeout_theme_roots', '1346184884', 'yes'),
+(346, '_site_transient_theme_roots', 'a:3:{s:5:"badia";s:7:"/themes";s:12:"twentyeleven";s:7:"/themes";s:9:"twentyten";s:7:"/themes";}', 'yes'),
+(347, '_site_transient_timeout_wporg_theme_feature_list', '1346193886', 'yes'),
+(348, '_site_transient_wporg_theme_feature_list', 'a:5:{s:6:"Colors";a:15:{i:0;s:5:"black";i:1;s:4:"blue";i:2;s:5:"brown";i:3;s:4:"gray";i:4;s:5:"green";i:5;s:6:"orange";i:6;s:4:"pink";i:7;s:6:"purple";i:8;s:3:"red";i:9;s:6:"silver";i:10;s:3:"tan";i:11;s:5:"white";i:12;s:6:"yellow";i:13;s:4:"dark";i:14;s:5:"light";}s:7:"Columns";a:6:{i:0;s:10:"one-column";i:1;s:11:"two-columns";i:2;s:13:"three-columns";i:3;s:12:"four-columns";i:4;s:12:"left-sidebar";i:5;s:13:"right-sidebar";}s:5:"Width";a:2:{i:0;s:11:"fixed-width";i:1;s:14:"flexible-width";}s:8:"Features";a:19:{i:0;s:8:"blavatar";i:1;s:10:"buddypress";i:2;s:17:"custom-background";i:3;s:13:"custom-colors";i:4;s:13:"custom-header";i:5;s:11:"custom-menu";i:6;s:12:"editor-style";i:7;s:21:"featured-image-header";i:8;s:15:"featured-images";i:9;s:15:"flexible-header";i:10;s:20:"front-page-post-form";i:11;s:19:"full-width-template";i:12;s:12:"microformats";i:13;s:12:"post-formats";i:14;s:20:"rtl-language-support";i:15;s:11:"sticky-post";i:16;s:13:"theme-options";i:17;s:17:"threaded-comments";i:18;s:17:"translation-ready";}s:7:"Subject";a:3:{i:0;s:7:"holiday";i:1;s:13:"photoblogging";i:2;s:8:"seasonal";}}', 'yes'),
+(349, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -313,10 +320,10 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=38 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=132 ;
 
 --
--- Volcado de datos para la tabla `wp_postmeta`
+-- Volcar la base de datos para la tabla `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -348,7 +355,92 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (34, 30, '_wp_attached_file', '2012/08/cropped-header-1.png'),
 (35, 30, '_wp_attachment_context', 'custom-header'),
 (36, 30, '_wp_attachment_metadata', 'a:6:{s:5:"width";s:4:"1000";s:6:"height";s:3:"226";s:14:"hwstring_small";s:23:"height=''28'' width=''128''";s:4:"file";s:28:"2012/08/cropped-header-1.png";s:5:"sizes";a:3:{s:9:"thumbnail";a:3:{s:4:"file";s:28:"cropped-header-1-150x150.png";s:5:"width";s:3:"150";s:6:"height";s:3:"150";}s:6:"medium";a:3:{s:4:"file";s:27:"cropped-header-1-300x67.png";s:5:"width";s:3:"300";s:6:"height";s:2:"67";}s:13:"small-feature";a:3:{s:4:"file";s:28:"cropped-header-1-500x113.png";s:5:"width";s:3:"500";s:6:"height";s:3:"113";}}s:10:"image_meta";a:10:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";}}'),
-(37, 30, '_wp_attachment_is_custom_header', 'badia');
+(37, 30, '_wp_attachment_is_custom_header', 'badia'),
+(38, 33, '_edit_last', '1'),
+(39, 33, '_edit_lock', '1346177790:1'),
+(40, 33, '_wp_page_template', 'default'),
+(41, 35, '_wp_attached_file', '2012/08/caneria2.jpg'),
+(42, 35, '_wp_attachment_metadata', 'a:6:{s:5:"width";s:4:"1200";s:6:"height";s:3:"802";s:14:"hwstring_small";s:23:"height=''85'' width=''128''";s:4:"file";s:20:"2012/08/caneria2.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:3:{s:4:"file";s:20:"caneria2-150x150.jpg";s:5:"width";s:3:"150";s:6:"height";s:3:"150";}s:6:"medium";a:3:{s:4:"file";s:20:"caneria2-300x200.jpg";s:5:"width";s:3:"300";s:6:"height";s:3:"200";}s:5:"large";a:3:{s:4:"file";s:21:"caneria2-1024x684.jpg";s:5:"width";s:4:"1024";s:6:"height";s:3:"684";}s:14:"post-thumbnail";a:3:{s:4:"file";s:21:"caneria2-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"large-feature";a:3:{s:4:"file";s:21:"caneria2-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"small-feature";a:3:{s:4:"file";s:20:"caneria2-448x300.jpg";s:5:"width";s:3:"448";s:6:"height";s:3:"300";}}s:10:"image_meta";a:10:{s:8:"aperture";s:3:"5.6";s:6:"credit";s:0:"";s:6:"camera";s:7:"DMC-LZ3";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1291044566";s:9:"copyright";s:0:"";s:12:"focal_length";s:3:"6.1";s:3:"iso";s:2:"80";s:13:"shutter_speed";s:5:"0.008";s:5:"title";s:0:"";}}'),
+(43, 36, '_wp_attached_file', '2012/08/valvulas.jpg'),
+(44, 36, '_wp_attachment_metadata', 'a:6:{s:5:"width";s:4:"1200";s:6:"height";s:3:"900";s:14:"hwstring_small";s:23:"height=''96'' width=''128''";s:4:"file";s:20:"2012/08/valvulas.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:3:{s:4:"file";s:20:"valvulas-150x150.jpg";s:5:"width";s:3:"150";s:6:"height";s:3:"150";}s:6:"medium";a:3:{s:4:"file";s:20:"valvulas-300x225.jpg";s:5:"width";s:3:"300";s:6:"height";s:3:"225";}s:5:"large";a:3:{s:4:"file";s:21:"valvulas-1024x768.jpg";s:5:"width";s:4:"1024";s:6:"height";s:3:"768";}s:14:"post-thumbnail";a:3:{s:4:"file";s:21:"valvulas-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"large-feature";a:3:{s:4:"file";s:21:"valvulas-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"small-feature";a:3:{s:4:"file";s:20:"valvulas-400x300.jpg";s:5:"width";s:3:"400";s:6:"height";s:3:"300";}}s:10:"image_meta";a:10:{s:8:"aperture";s:3:"5.6";s:6:"credit";s:7:"Claudio";s:6:"camera";s:21:"Canon PowerShot SD450";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1259944571";s:9:"copyright";s:0:"";s:12:"focal_length";s:3:"5.8";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:6:"0.0025";s:5:"title";s:0:"";}}'),
+(45, 37, '_wp_attached_file', '2012/08/tablero2.jpg'),
+(46, 37, '_wp_attachment_metadata', 'a:6:{s:5:"width";s:4:"1200";s:6:"height";s:3:"803";s:14:"hwstring_small";s:23:"height=''85'' width=''128''";s:4:"file";s:20:"2012/08/tablero2.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:3:{s:4:"file";s:20:"tablero2-150x150.jpg";s:5:"width";s:3:"150";s:6:"height";s:3:"150";}s:6:"medium";a:3:{s:4:"file";s:20:"tablero2-300x200.jpg";s:5:"width";s:3:"300";s:6:"height";s:3:"200";}s:5:"large";a:3:{s:4:"file";s:21:"tablero2-1024x685.jpg";s:5:"width";s:4:"1024";s:6:"height";s:3:"685";}s:14:"post-thumbnail";a:3:{s:4:"file";s:21:"tablero2-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"large-feature";a:3:{s:4:"file";s:21:"tablero2-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"small-feature";a:3:{s:4:"file";s:20:"tablero2-448x300.jpg";s:5:"width";s:3:"448";s:6:"height";s:3:"300";}}s:10:"image_meta";a:10:{s:8:"aperture";s:3:"2.8";s:6:"credit";s:0:"";s:6:"camera";s:7:"DMC-LZ3";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1291039633";s:9:"copyright";s:0:"";s:12:"focal_length";s:3:"6.1";s:3:"iso";s:3:"160";s:13:"shutter_speed";s:17:"0.033333333333333";s:5:"title";s:0:"";}}'),
+(47, 38, '_wp_attached_file', '2012/08/caneria.jpg'),
+(48, 38, '_wp_attachment_metadata', 'a:6:{s:5:"width";s:4:"1200";s:6:"height";s:3:"802";s:14:"hwstring_small";s:23:"height=''85'' width=''128''";s:4:"file";s:19:"2012/08/caneria.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:3:{s:4:"file";s:19:"caneria-150x150.jpg";s:5:"width";s:3:"150";s:6:"height";s:3:"150";}s:6:"medium";a:3:{s:4:"file";s:19:"caneria-300x200.jpg";s:5:"width";s:3:"300";s:6:"height";s:3:"200";}s:5:"large";a:3:{s:4:"file";s:20:"caneria-1024x684.jpg";s:5:"width";s:4:"1024";s:6:"height";s:3:"684";}s:14:"post-thumbnail";a:3:{s:4:"file";s:20:"caneria-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"large-feature";a:3:{s:4:"file";s:20:"caneria-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"small-feature";a:3:{s:4:"file";s:19:"caneria-448x300.jpg";s:5:"width";s:3:"448";s:6:"height";s:3:"300";}}s:10:"image_meta";a:10:{s:8:"aperture";s:3:"2.8";s:6:"credit";s:0:"";s:6:"camera";s:7:"DMC-LZ3";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1291043840";s:9:"copyright";s:0:"";s:12:"focal_length";s:3:"6.1";s:3:"iso";s:2:"80";s:13:"shutter_speed";s:7:"0.00625";s:5:"title";s:0:"";}}'),
+(49, 39, '_wp_attached_file', '2012/08/tablero.jpg'),
+(50, 39, '_wp_attachment_metadata', 'a:6:{s:5:"width";s:4:"1200";s:6:"height";s:3:"803";s:14:"hwstring_small";s:23:"height=''85'' width=''128''";s:4:"file";s:19:"2012/08/tablero.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:3:{s:4:"file";s:19:"tablero-150x150.jpg";s:5:"width";s:3:"150";s:6:"height";s:3:"150";}s:6:"medium";a:3:{s:4:"file";s:19:"tablero-300x200.jpg";s:5:"width";s:3:"300";s:6:"height";s:3:"200";}s:5:"large";a:3:{s:4:"file";s:20:"tablero-1024x685.jpg";s:5:"width";s:4:"1024";s:6:"height";s:3:"685";}s:14:"post-thumbnail";a:3:{s:4:"file";s:20:"tablero-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"large-feature";a:3:{s:4:"file";s:20:"tablero-1000x288.jpg";s:5:"width";s:4:"1000";s:6:"height";s:3:"288";}s:13:"small-feature";a:3:{s:4:"file";s:19:"tablero-448x300.jpg";s:5:"width";s:3:"448";s:6:"height";s:3:"300";}}s:10:"image_meta";a:10:{s:8:"aperture";s:3:"2.8";s:6:"credit";s:0:"";s:6:"camera";s:7:"DMC-LZ3";s:7:"caption";s:0:"";s:17:"created_timestamp";s:10:"1291039427";s:9:"copyright";s:0:"";s:12:"focal_length";s:3:"6.1";s:3:"iso";s:3:"160";s:13:"shutter_speed";s:17:"0.033333333333333";s:5:"title";s:0:"";}}'),
+(51, 40, '_menu_item_type', 'post_type'),
+(52, 40, '_menu_item_menu_item_parent', '0'),
+(53, 40, '_menu_item_object_id', '33'),
+(54, 40, '_menu_item_object', 'page'),
+(55, 40, '_menu_item_target', ''),
+(56, 40, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(57, 40, '_menu_item_xfn', ''),
+(58, 40, '_menu_item_url', ''),
+(60, 41, '_menu_item_type', 'post_type'),
+(61, 41, '_menu_item_menu_item_parent', '0'),
+(62, 41, '_menu_item_object_id', '13'),
+(63, 41, '_menu_item_object', 'page'),
+(64, 41, '_menu_item_target', ''),
+(65, 41, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(66, 41, '_menu_item_xfn', ''),
+(67, 41, '_menu_item_url', ''),
+(69, 42, '_menu_item_type', 'post_type'),
+(70, 42, '_menu_item_menu_item_parent', '0'),
+(71, 42, '_menu_item_object_id', '11'),
+(72, 42, '_menu_item_object', 'page'),
+(73, 42, '_menu_item_target', ''),
+(74, 42, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(75, 42, '_menu_item_xfn', ''),
+(76, 42, '_menu_item_url', ''),
+(78, 43, '_menu_item_type', 'post_type'),
+(79, 43, '_menu_item_menu_item_parent', '0'),
+(80, 43, '_menu_item_object_id', '9'),
+(81, 43, '_menu_item_object', 'page'),
+(82, 43, '_menu_item_target', ''),
+(83, 43, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(84, 43, '_menu_item_xfn', ''),
+(85, 43, '_menu_item_url', ''),
+(87, 44, '_menu_item_type', 'post_type'),
+(88, 44, '_menu_item_menu_item_parent', '0'),
+(89, 44, '_menu_item_object_id', '6'),
+(90, 44, '_menu_item_object', 'page'),
+(91, 44, '_menu_item_target', ''),
+(92, 44, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(93, 44, '_menu_item_xfn', ''),
+(94, 44, '_menu_item_url', ''),
+(96, 45, '_menu_item_type', 'post_type'),
+(97, 45, '_menu_item_menu_item_parent', '0'),
+(98, 45, '_menu_item_object_id', '2'),
+(99, 45, '_menu_item_object', 'page'),
+(100, 45, '_menu_item_target', ''),
+(101, 45, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(102, 45, '_menu_item_xfn', ''),
+(103, 45, '_menu_item_url', ''),
+(105, 46, '_menu_item_type', 'post_type'),
+(106, 46, '_menu_item_menu_item_parent', '0'),
+(107, 46, '_menu_item_object_id', '13'),
+(108, 46, '_menu_item_object', 'page'),
+(109, 46, '_menu_item_target', ''),
+(110, 46, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(111, 46, '_menu_item_xfn', ''),
+(112, 46, '_menu_item_url', ''),
+(114, 47, '_menu_item_type', 'post_type'),
+(115, 47, '_menu_item_menu_item_parent', '0'),
+(116, 47, '_menu_item_object_id', '11'),
+(117, 47, '_menu_item_object', 'page'),
+(118, 47, '_menu_item_target', ''),
+(119, 47, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(120, 47, '_menu_item_xfn', ''),
+(121, 47, '_menu_item_url', ''),
+(123, 48, '_menu_item_type', 'post_type'),
+(124, 48, '_menu_item_menu_item_parent', '0'),
+(125, 48, '_menu_item_object_id', '9'),
+(126, 48, '_menu_item_object', 'page'),
+(127, 48, '_menu_item_target', ''),
+(128, 48, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(129, 48, '_menu_item_xfn', ''),
+(130, 48, '_menu_item_url', '');
 
 -- --------------------------------------------------------
 
@@ -385,10 +477,10 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
 
 --
--- Volcado de datos para la tabla `wp_posts`
+-- Volcar la base de datos para la tabla `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -418,7 +510,23 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (29, 1, '2012-08-13 21:14:22', '2012-08-13 21:14:22', 'http://localhost/badia/website/wp-content/uploads/2012/08/cropped-header-3.png', 'cropped-header-3.png', '', 'inherit', 'closed', 'open', '', 'cropped-header-3-png', '', '', '2012-08-13 21:14:22', '2012-08-13 21:14:22', '', 0, 'http://localhost/badia/website/wp-content/uploads/2012/08/cropped-header-3.png', 0, 'attachment', 'image/png', 0),
 (30, 1, '2012-08-13 21:16:53', '2012-08-13 21:16:53', 'http://localhost/badia/website/wp-content/uploads/2012/08/cropped-header-1.png', 'cropped-header-1.png', '', 'inherit', 'open', 'open', '', 'cropped-header-1-png', '', '', '2012-08-13 21:16:53', '2012-08-13 21:16:53', '', 0, 'http://localhost/badia/website/wp-content/uploads/2012/08/cropped-header-1.png', 0, 'attachment', 'image/png', 0),
 (31, 1, '2012-08-13 19:23:04', '2012-08-13 19:23:04', 'Bienvenido al sito web de Electromontajes Badia. Esta es tu primera entrada. Edítala o bórrala, ¡y comienza a publicar!.', 'Electromontajes Badia', '', 'inherit', 'open', 'open', '', '1-revision-2', '', '', '2012-08-13 19:23:04', '2012-08-13 19:23:04', '', 1, 'http://localhost/badia/website/?p=31', 0, 'revision', '', 0),
-(32, 1, '2012-08-28 13:58:52', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2012-08-28 13:58:52', '0000-00-00 00:00:00', '', 0, 'http://localhost/badia/website/?p=32', 0, 'post', '', 0);
+(32, 1, '2012-08-28 13:58:52', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2012-08-28 13:58:52', '0000-00-00 00:00:00', '', 0, 'http://localhost/badia/website/?p=32', 0, 'post', '', 0),
+(33, 1, '2012-08-28 17:59:36', '2012-08-28 17:59:36', '', 'Inicio', '', 'publish', 'open', 'open', '', 'inicio', '', '', '2012-08-28 17:59:36', '2012-08-28 17:59:36', '', 0, 'http://localhost/badia/website/?page_id=33', 0, 'page', '', 0),
+(34, 1, '2012-08-28 17:59:07', '2012-08-28 17:59:07', '', 'Inicio', '', 'inherit', 'open', 'open', '', '33-revision', '', '', '2012-08-28 17:59:07', '2012-08-28 17:59:07', '', 33, 'http://localhost/badia/website/?p=34', 0, 'revision', '', 0),
+(35, 1, '2012-08-28 18:11:19', '2012-08-28 18:11:19', '', 'caneria2', '', 'inherit', 'open', 'open', '', 'caneria2', '', '', '2012-08-28 18:11:19', '2012-08-28 18:11:19', '', 33, 'http://localhost/badia/website/wp-content/uploads/2012/08/caneria2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(36, 1, '2012-08-28 18:11:20', '2012-08-28 18:11:20', '', 'valvulas', '', 'inherit', 'open', 'open', '', 'valvulas', '', '', '2012-08-28 18:11:20', '2012-08-28 18:11:20', '', 33, 'http://localhost/badia/website/wp-content/uploads/2012/08/valvulas.jpg', 0, 'attachment', 'image/jpeg', 0),
+(37, 1, '2012-08-28 18:11:21', '2012-08-28 18:11:21', '', 'tablero2', '', 'inherit', 'open', 'open', '', 'tablero2', '', '', '2012-08-28 18:11:21', '2012-08-28 18:11:21', '', 33, 'http://localhost/badia/website/wp-content/uploads/2012/08/tablero2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(38, 1, '2012-08-28 18:11:22', '2012-08-28 18:11:22', '', 'caneria', '', 'inherit', 'open', 'open', '', 'caneria', '', '', '2012-08-28 18:11:22', '2012-08-28 18:11:22', '', 33, 'http://localhost/badia/website/wp-content/uploads/2012/08/caneria.jpg', 0, 'attachment', 'image/jpeg', 0),
+(39, 1, '2012-08-28 18:11:23', '2012-08-28 18:11:23', '', 'tablero', '', 'inherit', 'open', 'open', '', 'tablero', '', '', '2012-08-28 18:11:23', '2012-08-28 18:11:23', '', 33, 'http://localhost/badia/website/wp-content/uploads/2012/08/tablero.jpg', 0, 'attachment', 'image/jpeg', 0),
+(40, 1, '2012-08-28 19:57:00', '2012-08-28 19:57:00', ' ', '', '', 'publish', 'open', 'open', '', '40', '', '', '2012-08-28 19:57:34', '2012-08-28 19:57:34', '', 0, 'http://localhost/badia/website/?p=40', 1, 'nav_menu_item', '', 0),
+(41, 1, '2012-08-28 19:57:01', '2012-08-28 19:57:01', ' ', '', '', 'publish', 'open', 'open', '', '41', '', '', '2012-08-28 19:57:35', '2012-08-28 19:57:35', '', 0, 'http://localhost/badia/website/?p=41', 6, 'nav_menu_item', '', 0),
+(42, 1, '2012-08-28 19:57:01', '2012-08-28 19:57:01', ' ', '', '', 'publish', 'open', 'open', '', '42', '', '', '2012-08-28 19:57:35', '2012-08-28 19:57:35', '', 0, 'http://localhost/badia/website/?p=42', 4, 'nav_menu_item', '', 0),
+(43, 1, '2012-08-28 19:57:01', '2012-08-28 19:57:01', ' ', '', '', 'publish', 'open', 'open', '', '43', '', '', '2012-08-28 19:57:35', '2012-08-28 19:57:35', '', 0, 'http://localhost/badia/website/?p=43', 5, 'nav_menu_item', '', 0),
+(44, 1, '2012-08-28 19:57:01', '2012-08-28 19:57:01', ' ', '', '', 'publish', 'open', 'open', '', '44', '', '', '2012-08-28 19:57:34', '2012-08-28 19:57:34', '', 0, 'http://localhost/badia/website/?p=44', 3, 'nav_menu_item', '', 0),
+(45, 1, '2012-08-28 19:57:01', '2012-08-28 19:57:01', ' ', '', '', 'publish', 'open', 'open', '', '45', '', '', '2012-08-28 19:57:34', '2012-08-28 19:57:34', '', 0, 'http://localhost/badia/website/?p=45', 2, 'nav_menu_item', '', 0),
+(46, 1, '2012-08-28 19:57:42', '2012-08-28 19:57:42', ' ', '', '', 'publish', 'open', 'open', '', '46', '', '', '2012-08-28 19:57:42', '2012-08-28 19:57:42', '', 0, 'http://localhost/badia/website/?p=46', 1, 'nav_menu_item', '', 0),
+(47, 1, '2012-08-28 19:57:42', '2012-08-28 19:57:42', ' ', '', '', 'publish', 'open', 'open', '', '47', '', '', '2012-08-28 19:57:42', '2012-08-28 19:57:42', '', 0, 'http://localhost/badia/website/?p=47', 2, 'nav_menu_item', '', 0),
+(48, 1, '2012-08-28 19:57:42', '2012-08-28 19:57:42', ' ', '', '', 'publish', 'open', 'open', '', '48', '', '', '2012-08-28 19:57:42', '2012-08-28 19:57:42', '', 0, 'http://localhost/badia/website/?p=48', 3, 'nav_menu_item', '', 0);
 
 -- --------------------------------------------------------
 
@@ -434,15 +542,17 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
   PRIMARY KEY (`term_id`),
   UNIQUE KEY `slug` (`slug`),
   KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Volcado de datos para la tabla `wp_terms`
+-- Volcar la base de datos para la tabla `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 (1, 'Sin categoría', 'sin-categoria', 0),
-(2, 'Sitios de interés', 'sitios-de-interes', 0);
+(2, 'Sitios de interés', 'sitios-de-interes', 0),
+(3, 'Header', 'header', 0),
+(4, 'Sidebar', 'sidebar', 0);
 
 -- --------------------------------------------------------
 
@@ -459,7 +569,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `wp_term_relationships`
+-- Volcar la base de datos para la tabla `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -470,7 +580,16 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (4, 2, 0),
 (5, 2, 0),
 (6, 2, 0),
-(7, 2, 0);
+(7, 2, 0),
+(40, 3, 0),
+(41, 3, 0),
+(42, 3, 0),
+(43, 3, 0),
+(44, 3, 0),
+(45, 3, 0),
+(46, 4, 0),
+(47, 4, 0),
+(48, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -488,15 +607,17 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Volcado de datos para la tabla `wp_term_taxonomy`
+-- Volcar la base de datos para la tabla `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 (1, 1, 'category', '', 0, 1),
-(2, 2, 'link_category', '', 0, 7);
+(2, 2, 'link_category', '', 0, 7),
+(3, 3, 'nav_menu', '', 0, 6),
+(4, 4, 'nav_menu', '', 0, 3);
 
 -- --------------------------------------------------------
 
@@ -512,10 +633,10 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 --
--- Volcado de datos para la tabla `wp_usermeta`
+-- Volcar la base de datos para la tabla `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -527,14 +648,17 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (6, 1, 'comment_shortcuts', 'false'),
 (7, 1, 'admin_color', 'fresh'),
 (8, 1, 'use_ssl', '0'),
-(9, 1, 'show_admin_bar_front', 'true'),
+(9, 1, 'show_admin_bar_front', 'false'),
 (10, 1, 'wp_capabilities', 'a:1:{s:13:"administrator";s:1:"1";}'),
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', 'wp330_toolbar,wp330_media_uploader,wp330_saving_widgets,wp340_choose_image_from_library,wp340_customize_current_theme_link'),
 (13, 1, 'show_welcome_panel', '1'),
 (14, 1, 'wp_dashboard_quick_press_last_post_id', '32'),
 (15, 1, 'managenav-menuscolumnshidden', 'a:4:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";}'),
-(16, 1, 'metaboxhidden_nav-menus', 'a:3:{i:0;s:8:"add-post";i:1;s:12:"add-post_tag";i:2;s:15:"add-post_format";}');
+(16, 1, 'metaboxhidden_nav-menus', 'a:3:{i:0;s:8:"add-post";i:1;s:12:"add-post_tag";i:2;s:15:"add-post_format";}'),
+(17, 1, 'aim', ''),
+(18, 1, 'yim', ''),
+(19, 1, 'jabber', '');
 
 -- --------------------------------------------------------
 
@@ -559,12 +683,8 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Volcado de datos para la tabla `wp_users`
+-- Volcar la base de datos para la tabla `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'admin', '$P$BoRNHtv6Jw3TBD45XKmm2vTniO/X17/', 'admin', 'alex.m3lo@gmail.com', '', '2012-07-17 19:03:03', '', 0, 'admin');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

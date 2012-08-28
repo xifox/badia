@@ -68,12 +68,12 @@ height:350px
 #slides .next{
 position: absolute;
 right:-40px;
-top: 200px;
+top: 145px;
 }
 #slides .prev{
 position: absolute;
 left:-40px;
-top: 200px;
+top: 145px;
 }
 
 .pagination {
@@ -129,6 +129,27 @@ float: left;
 margin: 0 40% 0 0;
 width: 60%;
 height: 100%;
+padding: 0 0 0 83px;
+box-sizing: border-box;
+}
+.singular.page .hentry{
+padding:0;
+margin: 0 0 10px 0;
+}
+.singular .entry-header, .singular .entry-content, 
+.singular footer.entry-meta, .singular #comments-title {
+  margin: 0 auto;
+  width: 100%;
+}
+.singular #content, .left-sidebar.singular #content{
+  margin: 0
+}
+.singular .entry-meta .edit-link a {
+  bottom: auto;
+  left: auto;
+  position: absolute;
+  right: 10px;
+  top: 0px;
 }
 #secondary {
 background: rgba(0, 111, 162, 0.61); 

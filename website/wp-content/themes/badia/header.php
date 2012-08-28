@@ -136,7 +136,6 @@
   $slideID = 33; 
   $slides = get_children(array('post_type' => 'attachment', 'post_parent' => $slideID, 'orderby' => 'menu_order','order' => 'ASC')); ?>
         <?php if ($slides == true) foreach($slides as $id => $attachment) : ?>
-
           <?php
             $img = wp_get_attachment_image_src($id, 'full');
             $imgth = wp_get_attachment_image_src($id, 'full');

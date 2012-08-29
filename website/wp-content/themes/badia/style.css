@@ -63,7 +63,19 @@ height:350px;
 position: relative;
 }
 .slides_container{
-height:350px
+height:350px;
+width:1200px;
+overflow:hidden;
+position:relative;
+display:none;
+}
+.slides_container div {
+width:1200px;
+height:350px;
+display:block;
+}                                                                        }
+#branding .slides_container img {
+display:block;
 }
 #slides .next{
 position: absolute;

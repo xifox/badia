@@ -51,37 +51,43 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+  <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.roundabout.min.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-mousewheel.js" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/antiscroll.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/antiscroll.js" type="text/javascript"></script>
+
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/Slides/source/slides.min.jquery.js" type="text/javascript"></script>
   <script>
-    $(function(){
-      $('#slides').slides({
-        preload: true,
-        preloadImage: 'img/loading.gif',
-        play: 5000,
-        pause: 2500,
-        hoverPause: true
-      });
-    });
+
   </script>
 <?php ?>
 <script>
-   $(document).ready(function() {
-   	$('ul.slide').roundabout({
-		btnNext: ".next",
-		btnPrev: ".prev",
-		autoplay: true,
-        	autoplayDuration: 5000,
-         	autoplayPauseOnHover: true,
-		minScale: 0
-	});
-	 $(function () {
+  $(document).ready(function() {
+    $('ul.slide').roundabout({
+       btnNext: ".next",
+       btnPrev: ".prev",
+       autoplay: true,
+       autoplayDuration: 5000,
+       autoplayPauseOnHover: true,
+       minScale: 0
+    });
+    $(function () {
         scroller = $('.box-wrap').antiscroll().data('antiscroll');
-		});
-   });
+    });
+    $(function(){
+      $('#slides').slides({
+        preload: true,
+        preloadImage: '<?php echo get_stylesheet_directory_uri(); ?>/images/loading.gif',
+        play: 5000,
+        pause: 2500,
+        hoverPause: true,
+        ieffect: 'slide, fade',
+        slideEasing: "easeOutQuad",
+        fadeEasing: "easeOutQuad"
+      });
+    });
+  });
   $(window).resize(function () {   scroller.refresh(); })
 
 </script>
@@ -140,9 +146,10 @@
             $img = wp_get_attachment_image_src($id, 'full');
             $imgth = wp_get_attachment_image_src($id, 'full');
 
-                        ?>
+?>
+<div>
             <img data-original="<?php echo $img[0] ?>" class="lazy-slide" src="<?php echo $imgth[0]  ?>" width="<?php echo $img[1] ?>"  height="<?php echo $img[2] ?>"  alt="<?php $post->post_title ?>" />
-
+</div>
         <?php endforeach; ?>
 
         </div>

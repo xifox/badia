@@ -588,14 +588,14 @@ a:hover {
 	top: 0;
 }
 #access ul ul a {
-	background: #f9f9f9;
-	border-bottom: 1px dotted #ddd;
-	color: #444;
+	background: black;
+	border-bottom: 1px solid #ddd;
+	color: white;
 	font-size: 13px;
 	font-weight: normal;
 	height: auto;
 	line-height: 1.4em;
-	padding: 10px 10px;
+	padding: 0px 10px;
 	width: 168px;
 }
 #access li:hover > a,

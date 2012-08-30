@@ -13,7 +13,7 @@ $current_layout = $options['theme_layout'];
 if ( 'content' != $current_layout ) :
 ?>
     <div id="secondary" class="widget-area" role="complementary">
-      <h1 id="logo"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png" alt="logo" width="189" height="223" /></h1>
+      <h1 id="logo"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png" alt="logo" width="249" height="290" /></h1>
       <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
         
         <aside id="archives" class="widget">

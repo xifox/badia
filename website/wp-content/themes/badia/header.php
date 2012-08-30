@@ -147,8 +147,8 @@
         <?php endforeach; ?>
 
         </div>
-        <a href="#" class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Slides/examples/Standard/img/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
-        <a href="#" class="next"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Slides/examples/Standard/img/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+        <a href="#" class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide-left.png" width="27" height="44" alt="Arrow Prev"></a>
+        <a href="#" class="next"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide-right.png" width="27" height="44" alt="Arrow Next"></a>
       </div>
 
 			<nav id="access" role="navigation">

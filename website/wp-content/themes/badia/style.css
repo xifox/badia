@@ -68,12 +68,12 @@ height:350px
 #slides .next{
 position: absolute;
 right:-40px;
-top: 200px;
+top: 153px;
 }
 #slides .prev{
 position: absolute;
 left:-40px;
-top: 200px;
+top: 153px;
 }
 
 .pagination {

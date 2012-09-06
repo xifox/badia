@@ -130,10 +130,16 @@ margin: 0;
 #access ul {
 margin: 0 0 0 20px;
 }
+#access li{
+font-family: 'Oswald', sans-serif;
+font-weight: 400; 
+font-size: 14px;
+}
 #access ul li a{
 text-transform: uppercase;
 font-weight: bold;
-line-height: 50px;
+line-height: 45px;
+height: 50px;
 }
 .singular #primary,
 #primary {
@@ -163,6 +169,9 @@ margin: 0 0 10px 0;
   right: 10px;
   top: 0px;
 }
+.entry-content p {
+padding: 0 30px 0 170px;
+}
 #secondary {
 background: rgba(0, 111, 162, 0.61); 
 width: 30%;
@@ -173,14 +182,53 @@ box-sizing:border-box;
 position:absolute;
 right: 0px;
 top:0px;
-padding:30px 20px 0px 20px;
+padding:30px 0px 0px;
 z-index: 99969999;
 margin-top: 0px;
 margin-right: 10%;
 text-align: center;
 }
+#menu-sidebar li {
+width: 100%;
+font-family: 'Oswald', sans-serif;
+font-weight: 400; 
+font-size: 17px;
+color:white;
+border-bottom: 1px solid white;
+line-height: 40px;
+}
+#menu-sidebar li#menu-item-57 {
+border-top: 1px solid white;
+}
+#menu-sidebar li a{
+color:white;
+}
+.widget-title{
+width: 35%;
+float: left;
+padding-left:13%;
+text-align: left;
+font-family: 'Oswald', sans-serif;
+font-weight: 400; 
+font-size: 15px;
+line-height: 20px;
+}
+.widget {
+margin: 0 0 120px;
+}
+div .textwidget{
+width: 42%;
+float: left;
+font-family: 'Oswald', sans-serif;
+font-weight: 400; 
+font-size: 12px;
+line-height: 20px;
+color: white;
+text-align: left;
+}
+
 .widget-title , .widget ul li{
-color: black;
+color: white;
 }
 input#s {
 margin-top: 10px;
@@ -253,5 +301,8 @@ div.box-inner {
 	width: 100%;
 	}
 
-
+ul, ol {
+margin: 0;
+list-style: none;
+}
 

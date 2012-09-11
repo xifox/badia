@@ -86,7 +86,7 @@ display:none;
 width:1200px;
 height:350px;
 display:block;
-}                                                                        }
+}
 #branding .slides_container img {
 display:block;
 }
@@ -153,6 +153,11 @@ text-transform: uppercase;
 font-weight: bold;
 line-height: 45px;
 height: 50px;
+background: black;
+border-bottom: 1px solid #DDD;
+color: white;
+font-size: 13px;
+padding: 0 10px;
 }
 .singular #primary,
 #primary {

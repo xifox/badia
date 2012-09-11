@@ -41,10 +41,16 @@ margin: 0 0% 0 5%;
 width: 90%;
 height: 100%;
 }
+.entry-content, .entry-summary {
+padding: 0.625em 0 0;
+}
 .singular .entry-title{
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
 	font-size: 28px;
+	line-height: 30px;
+	width:24%;
+	float: left;
 }
 .entry-content p{
 font-family: 'Arial', sans-serif;
@@ -139,6 +145,8 @@ margin: 0;
 -webkit-box-shadow: none;
 -moz-box-shadow: none;
 box-shadow: none;
+background: black;
+
 }
 #access div{
 margin: 0;
@@ -154,15 +162,14 @@ font-size: 14px;
 #access ul li a{
 text-transform: uppercase;
 font-weight: bold;
-line-height: 45px;
+line-height: 44px;
 height: 50px;
 background: black;
-border-bottom: 1px solid #DDD;
 color: white;
-font-size: 13px;
-padding: 0 10px;
+font-size: 15px;
+padding: 0 15px;
 }
-access ul ul{
+#access ul ul{
 -moz-box-shadow:none;
 -webkit-box-shadow:none;
 box-shadow:none;
@@ -171,10 +178,10 @@ box-shadow:none;
 #primary {
 background-color: white;
 float: left;
-margin: -20px 37px 0 82px;
+margin: -10px 0px 0 82px;
 width: 88%;
 height: 100%;
-padding: 20px 465px 5px 76px;
+padding: 20px 34% 5px 0px;
 box-sizing: border-box;
 }
 .singular.page .hentry{
@@ -197,7 +204,7 @@ margin: 0 0 10px 0;
   top: 0px;
 }
 .entry-content p {
-padding: 0 30px 0 170px;
+padding: 0 30px 0 190px;
 }
 #secondary {
 background: rgba(0, 111, 162, 0.61); 

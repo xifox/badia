@@ -136,6 +136,9 @@ top:0px;
 width: 100%;
 height: 50px;
 margin: 0;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
 }
 #access div{
 margin: 0;
@@ -153,6 +156,11 @@ text-transform: uppercase;
 font-weight: bold;
 line-height: 45px;
 height: 50px;
+}
+access ul ul{
+-moz-box-shadow:none;
+-webkit-box-shadow:none;
+box-shadow:none;
 }
 .singular #primary,
 #primary {

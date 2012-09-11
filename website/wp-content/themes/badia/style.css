@@ -15,7 +15,10 @@ overflow: hidden;
 padding: 0;
 margin: 0;
 }
+
 #page {
+background: url(images/bodylines.png) repeat-x 0 440px;
+background-color: white;
 height: 100%;
 margin: auto;
 padding: 0;
@@ -37,6 +40,16 @@ clear: none;
 margin: 0 0% 0 5%;
 width: 90%;
 height: 100%;
+}
+.singular .entry-title{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size: 28px;
+}
+.entry-content p{
+font-family: 'Arial', sans-serif;
+font-weight: regular;
+font-size: 14px;
 }
 #branding {
 border-top: none;
@@ -143,11 +156,12 @@ height: 50px;
 }
 .singular #primary,
 #primary {
+background-color: white;
 float: left;
-margin: 0 40% 0 0;
-width: 60%;
+margin: -20px 37px 0 82px;
+width: 88%;
 height: 100%;
-padding: 0 0 0 83px;
+padding: 20px 465px 5px 76px;
 box-sizing: border-box;
 }
 .singular.page .hentry{
@@ -182,7 +196,7 @@ box-sizing:border-box;
 position:absolute;
 right: 0px;
 top:0px;
-padding:30px 0px 0px;
+padding:5px 0px 0px;
 z-index: 99969999;
 margin-top: 0px;
 margin-right: 10%;
@@ -199,6 +213,7 @@ line-height: 40px;
 }
 #menu-sidebar li#menu-item-57 {
 border-top: 1px solid white;
+margin-bottom: -1px;
 }
 #menu-sidebar li a{
 color:white;
@@ -214,7 +229,7 @@ font-size: 15px;
 line-height: 20px;
 }
 .widget {
-margin: 0 0 120px;
+margin: 0 0 140px;
 }
 div .textwidget{
 width: 42%;
@@ -233,6 +248,7 @@ color: white;
 input#s {
 margin-top: 10px;
 }
+
 /* =antiscroll
 -------------------------------------------------------*/
 .antiscroll-wrap {

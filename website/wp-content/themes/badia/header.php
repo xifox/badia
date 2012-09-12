@@ -54,13 +54,23 @@
 <![endif]-->
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.2.min.js" type="text/javascript"></script>
   <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.roundabout.min.js" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-mousewheel.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.roundabout.min.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-mousewheel.js" type="text/javascript"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/antiscroll.js" type="text/javascript"></script>
-
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/Slides/source/slides.min.jquery.js" type="text/javascript"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.lightbox_me.js"></script>
   <script>
-
+  $(function() {
+    var lb = $('#lb');
+    lb.on('click', null, function(e) {
+      $('#hidden').lightbox_me({
+        centered: true, 
+        overlayCSS: {background: 'black', opacity: .6}
+      });
+     e.preventDefault();
+    });
+   
+  })
   </script>
 <?php ?>
 <script>

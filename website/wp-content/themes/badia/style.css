@@ -44,13 +44,20 @@ height: 100%;
 .entry-content, .entry-summary {
 padding: 0.625em 0 0;
 }
+.singular .entry-header{
+	width:27%;
+	float: left;
+
+}
+.singular .entry-content{
+float:left;
+}
 .singular .entry-title{
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
 	font-size: 28px;
 	line-height: 30px;
-	width:24%;
-	float: left;
+ text-transform: uppercase;
 }
 .entry-content p{
 font-family: 'Arial', sans-serif;
@@ -64,16 +71,16 @@ padding: 0px;
 position: relative;
 z-index:0;
 margin-bottom: 15px;
-z-index:10000
+z-index:100
 }
 #branding hgroup {
 height: 50px;
 margin: 0 7.6%;
 }
 #branding img {
-margin: 0;
+margin:0 ;
 height: auto;
-width: auto;
+width: 100%;
 }
 #slides{
 max-width:1200px;
@@ -108,9 +115,11 @@ top: 145px;
 }
 
 .pagination {
-    margin:6px 0 0;
+    margin:-20px 0 0 10px;
     float:left; 
     list-style: none;
+    z-index: 100;
+    position: relative;
 }
 
 .pagination li {
@@ -177,18 +186,20 @@ box-shadow:none;
 .singular #primary,
 #primary {
 background-color: white;
-float: left;
-margin: -10px 0px 0 82px;
-width: 88%;
+float: none;
+margin: 0 auto;
+width: 100%;
 height: 100%;
-padding: 20px 34% 5px 0px;
+padding: 0px 29% 5px 0px;
 box-sizing: border-box;
+max-width: 1200px
 }
 .singular.page .hentry{
 padding:0;
 margin: 0 0 10px 0;
+height:100%;
 }
-.singular .entry-header, .singular .entry-content, 
+
 .singular footer.entry-meta, .singular #comments-title {
   margin: 0 auto;
   width: 100%;
@@ -203,12 +214,10 @@ margin: 0 0 10px 0;
   right: 10px;
   top: 0px;
 }
-.entry-content p {
-padding: 0 30px 0 190px;
-}
+
 #secondary {
 background: rgba(0, 111, 162, 0.61); 
-width: 30%;
+width: 25%;
 height: 100%;
 box-sizing:border-box;
 -moz-box-sizing:border-box; /* Firefox */
@@ -217,51 +226,82 @@ position:absolute;
 right: 0px;
 top:0px;
 padding:5px 0px 0px;
-z-index: 99969999;
+z-index:200 ;
 margin-top: 0px;
 margin-right: 10%;
 text-align: center;
+}
+#secondary #logo{
+width:74%;
+margin: 0 auto;
+}
+
+#secondary #logo img{
+width:100%;
+max-width: 249px;
+height: auto;
+} 
+#menu-sidebar{
+border-top: 1px solid white;
+
 }
 #menu-sidebar li {
 width: 100%;
 font-family: 'Oswald', sans-serif;
 font-weight: 400; 
-font-size: 17px;
+font-size: 6px;
 color:white;
 border-bottom: 1px solid white;
-line-height: 40px;
+height: 40px;
+list-style: disc inside;
+line-height: 20px
 }
-#menu-sidebar li#menu-item-57 {
-border-top: 1px solid white;
-margin-bottom: -1px;
+
+#menu-sidebar li a{
+  display: block;
+text-align: left;
+width: 74%;
+margin:0 auto ;
+font-size: 17px;
+line-height: 40px
 }
 #menu-sidebar li a{
 color:white;
 }
 .widget-title{
-width: 35%;
+width: 50%;
 float: left;
-padding-left:13%;
+padding-left:0;
 text-align: left;
 font-family: 'Oswald', sans-serif;
 font-weight: 400; 
 font-size: 15px;
 line-height: 20px;
 }
-.widget {
+/*.widget {
 margin: 0 0 140px;
+}*/
+#text-2{
+width: 74%;
+margin:0 auto;
+height: 140px;
+}
+.menu-sidebar-container{
+clear:both;
 }
 div .textwidget{
-width: 42%;
+width: 50%;
 float: left;
 font-family: 'Oswald', sans-serif;
 font-weight: 400; 
 font-size: 12px;
-line-height: 20px;
+line-height: 16px;
 color: white;
 text-align: left;
 }
-
+div .textwidget p{
+  margin: 0 0 5px;
+}
 .widget-title , .widget ul li{
 color: white;
 }
@@ -271,6 +311,12 @@ margin-top: 10px;
 
 /* =antiscroll
 -------------------------------------------------------*/
+.singular .entry-content{
+height: 100%;
+box-sizing: border-box;
+padding: 10px;
+width:73%;
+}
 .antiscroll-wrap {
   height: 100%;
   width: 100%;
@@ -334,11 +380,32 @@ div.box {
 
 div.box-inner {
 	height: 100%;
-	width: 100%;
+	width: 95%;
 	}
 
 ul, ol {
 margin: 0;
 list-style: none;
 }
-
+#hidden{
+display:none;
+position:relative;
+}
+#hidden .close{
+width: 30px;
+height: 30px;
+position:absolute;
+top:0px;
+right:0px;
+cursor:pointer;
+}
+#lb{
+border: 2px solid #000;
+background: green;
+display:inline-block;
+padding: 10px;
+margin: 10px auto;
+width:auto;
+text-transform: uppercase;
+font-weight: bold;
+}

@@ -12,7 +12,7 @@
 	<header class="entry-header">
     <h1 class="entry-title"><?php the_title(); ?></h1>
     <?php if(is_page('contacto')): ?>
-      <a href="" id="lb">Como llegar</a>
+      <a href="" id="lb">Como llegar?</a>
       <div id="hidden">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/comollegar.png" />
         <div class="close"></div>

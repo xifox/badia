@@ -26,8 +26,8 @@
       <div class="box">
         <div class="antiscroll-inner">
           <div class="box-inner">
-		<?php the_content(); ?>
-    <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+			<?php the_content(); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
           </div>
         </div>
       </div>

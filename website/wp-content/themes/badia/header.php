@@ -52,57 +52,8 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.2.min.js" type="text/javascript"></script>
-  <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.roundabout.min.js" type="text/javascript"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-mousewheel.js" type="text/javascript"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/antiscroll.js" type="text/javascript"></script>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/Slides/source/slides.min.jquery.js" type="text/javascript"></script>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.lightbox_me.js"></script>
-  <script>
-  $(function() {
-    var lb = $('#lb');
-    lb.on('click', null, function(e) {
-      $('#hidden').lightbox_me({
-        centered: true, 
-        overlayCSS: {background: 'black', opacity: .6}
-      });
-     e.preventDefault();
-    });
-   
-  })
-  </script>
-<?php ?>
-<script>
-  $(document).ready(function() {
-    $('ul.slide').roundabout({
-       btnNext: ".next",
-       btnPrev: ".prev",
-       autoplay: true,
-       autoplayDuration: 5000,
-       autoplayPauseOnHover: true,
-       minScale: 0
-    });
-    $(function () {
-        scroller = $('.box-wrap').antiscroll().data('antiscroll');
-    });
-    $(function(){
-      $('#slides').slides({
-        preload: true,
-        preloadImage: '<?php echo get_stylesheet_directory_uri(); ?>/images/loading.gif',
-        play: 5000,
-        pause: 2500,
-        hoverPause: true,
-        ieffect: 'slide, fade',
-        slideEasing: "easeOutQuad",
-        fadeEasing: "easeOutQuad"
-      });
-    });
-  });
-  $(window).resize(function () {   scroller.refresh(); })
-
-</script>
-<style>
+  
+ <style>
    .roundabout-holder {
       list-style: none;
       padding: 0;
@@ -136,7 +87,7 @@
 	 */
 	wp_head();
 ?>
-</head>
+ </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">

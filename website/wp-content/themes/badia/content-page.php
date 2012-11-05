@@ -16,7 +16,12 @@
       <div id="hidden">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/comollegar.png" />
         <div class="close"></div>
-      <div>
+      </div>
+      <a href="" id="lb2">Formulario</a>
+      <div id="hidden2" class="blackside">
+        <?php echo do_shortcode('[contact-form-7 id="159" title="Formulario de contacto 1"]'); ?>
+        <div class="close"></div>
+      </div>
     <?php endif ?>
 
 	</header><!-- .entry-header -->

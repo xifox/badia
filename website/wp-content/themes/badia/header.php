@@ -23,7 +23,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -45,9 +45,18 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 
 	?></title>
+
 <link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel= "javascript" type= "text/js" href="<?php bloginfo( 'template_url' ); ?>../../twentyeleven/js/tabs.js" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>../../badia/stylesheets/base.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>../../badia/stylesheets/layout.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>../../badia/stylesheets/skeleton.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>../../badia/stylesheets/styles.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width:960px)" href="<?php bloginfo( 'template_url' ); ?>../../badia/stylesheets/medium.style.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="<?php bloginfo( 'template_url' ); ?>../../badia/stylesheets/small.style.css" />
+
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>

@@ -161,12 +161,13 @@ background: black;
 margin: 0;
 }
 #access ul {
-margin: 0 0 0 20px;
+margin: 0;
 }
 #access li{
 font-family: 'Oswald', sans-serif;
 font-weight: 400; 
 font-size: 14px;
+margin: 0;
 }
 #access ul li a{
 text-transform: uppercase;
@@ -233,7 +234,8 @@ text-align: center;
 }
 #secondary #logo{
 width:74%;
-margin: 0 auto;
+height: 273px;
+margin: 0 auto 5px;
 }
 
 #secondary #logo img{
@@ -254,7 +256,8 @@ color:white;
 border-bottom: 1px solid white;
 height: 40px;
 list-style: disc inside;
-line-height: 20px
+line-height: 20px;
+margin: 0;
 }
 
 #menu-sidebar li a{
@@ -266,6 +269,10 @@ font-size: 17px;
 line-height: 40px;
 text-transform: uppercase;
 }
+#menu-sidebar a, a:visited{
+text-decoration:none;
+}
+
 #menu-sidebar li a{
 color:white;
 }
@@ -285,7 +292,7 @@ margin: 0 0 140px;
 #text-2{
 width: 74%;
 margin:0 auto;
-height: 140px;
+height: 155px;
 }
 .menu-sidebar-container{
 clear:both;

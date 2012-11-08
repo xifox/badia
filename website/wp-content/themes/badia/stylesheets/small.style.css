@@ -1,9 +1,32 @@
+html {
+height: 600px;
+overflow: scroll;
+}
+body{
+  height: 650px;
+}
+#page {
+  height: 600px;
+}
 #main {
 margin: 0;
 padding: 0;
 }
+#access{
+height: 100px;
+bottom: 0;
+top: initial;
+}
+
 #branding {
-height: 0;
+width: 100%;
+height:100px;
+margin: 0;
+position:fixed;
+bottom: 0px;
+}
+#branding hgroup {
+height: 100px;
 margin: 0;
 }
 #slides{
@@ -14,22 +37,47 @@ position: relative;
 display:none;
 }
 .singular #primary, #primary {
-height: 55%;
+height: 370px;
 position: absolute;
-bottom:0;
 padding: 0;
+bottom: 0;
+}
+.singular .entry-content {
+width: 100%;
+height: 65%;
+padding: 0 0 10px 20px;
+}
+.singular .entry-header{
+width: 60%;
+height: 15%;
+}
+#access ul {
+margin: 0;
 }
 #access li {
-margin: 0 auto;
+width: 33%;
+margin: 0;
+border-left:1px solid white;
+border-bottom: 1px solid white;
+}
+#access li#menu-item-99, li#menu-item-43{
+border-left: none;
+}
+#access ul li a{
+padding: 0;
+text-align: center;
+}
+#access ul li ul.sub-menu{
+display: none;
 }
 #secondary {
 background: rgba(0, 111, 162, 0.61); 
 width: 100%;
-height: 45%;
+height:230px;
 box-sizing:border-box;
 -moz-box-sizing:border-box; /* Firefox */
 -webkit-box-sizing:border-box; /* Safari */
-padding:65px 0 0;
+padding:10px 0;
 z-index:0 ;
 margin: 0 auto;
 text-align: center;
@@ -48,7 +96,7 @@ height: auto;
 width: 110px;
 height: 190px;
 display: inline-block;
-padding-left: 15px;
+padding-left: 5px;
 }
 div .textwidget{
 width: 100%;
@@ -65,4 +113,11 @@ margin-bottom: 20px;
 .menu-sidebar-container{
 clear:both;
 display: none;
+}
+/*Smaller than standard 320 (devices and browsers) */
+@media only screen and (max-width: 320px) {
+  #access ul li a{
+  font-size: 12px;
+  }
+
 }

@@ -1,21 +1,19 @@
 html {
-height: 600px;
+height: auto;
 overflow: scroll;
 }
-body{
-  height: 650px;
-}
-#page {
-  height: 600px;
+#page{
+height: auto;
 }
 #main {
+height: auto;
 margin: 0;
 padding: 0;
 }
 #access{
 height: 100px;
-bottom: 0;
-top: initial;
+/*bottom: 0;
+top: initial;*/
 }
 
 #branding {
@@ -36,20 +34,36 @@ height:0px;
 position: relative;
 display:none;
 }
+div#content{
+height: auto;
+}
+.singular #content, .left-sidebar.singular #content {
+padding-bottom: 100px;
+}
 .singular #primary, #primary {
-height: 370px;
-position: absolute;
-padding: 0;
-bottom: 0;
+height: auto;
+padding:230px 0 0 0;
 }
 .singular .entry-content {
 width: 100%;
-height: 65%;
+height: auto;
 padding: 0 0 10px 20px;
 }
 .singular .entry-header{
 width: 60%;
 height: 15%;
+}
+.singular.page .hentry {
+height:auto;
+}
+.antiscroll-wrap {
+height: auto;
+}
+div.box {
+height: auto;
+}
+div.box-inner {
+height: auto;
 }
 #access ul {
 margin: 0;
@@ -81,7 +95,7 @@ padding:10px 0;
 z-index:0 ;
 margin: 0 auto;
 text-align: center;
-position: initial;
+position: absolute;
 display: inline;
 }
 #secondary #logo{

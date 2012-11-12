@@ -11,9 +11,11 @@ margin: 0;
 padding: 0;
 }
 #access{
+position: fixed;
 height: 100px;
-/*bottom: 0;
-top: initial;*/
+bottom: 0;
+left: 0;
+top: initial;
 }
 
 #branding {
@@ -22,6 +24,7 @@ height:100px;
 margin: 0;
 position:fixed;
 bottom: 0px;
+left: 0;
 }
 #branding hgroup {
 height: 100px;
@@ -66,6 +69,8 @@ div.box-inner {
 height: auto;
 }
 #access ul {
+position: fixed;
+bottom: 0;
 margin: 0;
 }
 #access li {

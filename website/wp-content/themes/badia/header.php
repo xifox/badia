@@ -53,7 +53,23 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 
 	?></title>
-
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "LocalBusiness",
+  "name" : "Electromontajes Badía SRL",
+  "image" : "http://www.electromontajebadia.com.ar/wp-content/themes/badia/images/logo-N.png",
+  "telephone" : "0299 441 3112",
+  "email" : "info@electromontajebadia.com.ar",
+  "address" : {
+    "@type" : "PostalAddress",
+    "streetAddress" : "PARQUE INDUSTRIAL NEUQUEN (ESTE) MANZANA R, LOTE 2B",
+    "addressLocality" : "NEUQUEN",
+    "addressCountry" : "ARGENTINA",
+    "postalCode" : "8300"
+  }
+}
+</script>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel= "javascript" type= "text/js" href="<?php bloginfo( 'template_url' ); ?>../../twentyeleven/js/tabs.js" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -89,7 +105,14 @@
       cursor: auto;
    }
 </style>
-
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-38598480-4', 'electromontajebadia.com.ar');
+  ga('send', 'pageview');
+</script>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).

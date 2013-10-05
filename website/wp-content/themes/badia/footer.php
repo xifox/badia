@@ -16,7 +16,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.roundabout.min.js" type="text/javascript"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-mousewheel.js" type="text/javascript"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/antiscroll.js" type="text/javascript"></script>
